@@ -11,14 +11,6 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{ts-component}}`);
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#ts-component}}
-      template block text
-    {{/ts-component}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().replace(/\s+/g,' ').trim(), 'ts-component.hbs Component defines someValue property as: from component');
+  
 });
