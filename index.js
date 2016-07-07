@@ -2,7 +2,7 @@
 
 'use strict';
 var path      = require('path');
-var TypeScriptPreprocessor = require('./lib/typify');
+var Typify = require('./lib/typify');
 
 module.exports = {
   name: 'ember-cli-typify',
@@ -11,6 +11,7 @@ module.exports = {
     this._super.included.apply(this, arguments);
     this.app = app;
 
+    this.setupPreprocessorRegistry('parent', app.registry);
   },
 
   blueprintsPath: function() {
@@ -18,9 +19,9 @@ module.exports = {
   },
 
   setupPreprocessorRegistry: function(type, registry) {
-    var options = TypeScriptPreprocessor.loadTsConfig(path.join(__dirname, 'tsconfig.json'));
-    var plugin = new TypeScriptPreprocessor({tsOptions:options});
-    registry.add('ts', plugin);
+    var load = Typify.loadTsConfig(__dirname);
+    var plugin = new Typify({tsOptions:load});
+    registry.add('js', plugin);
   }
 
 };
