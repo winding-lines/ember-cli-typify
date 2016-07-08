@@ -1,26 +1,12 @@
 # Ember-cli-typify
 
-This README outlines the details of collaborating on this Ember addon.
+Enable typescript preprocessing on Ember 2.x apps.
 
-## Installation
+To use install dependencies
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+    npm install --save-dev ember-cli-typify
+    npm install --save-dev github:winding-lines/at-types-ember
 
-## Running
+Create a tsconfig.json file, for example [tsconfig.json](https://raw.githubusercontent.com/winding-lines/ember-cli-typify/master/tsconfig.json)
 
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+Rename the files you want to check from .js to .ts
