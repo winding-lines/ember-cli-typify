@@ -1,4 +1,3 @@
-/// <reference path="@tests/ember" />
 
 import Ember from 'ember';
 

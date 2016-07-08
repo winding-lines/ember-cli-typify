@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-typify",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Allow ember apps to use typescript files.",
   "directories": {
     "doc": "doc",
@@ -11,11 +11,14 @@
     "start": "ember server",
     "test": "ember try:each"
   },
-  "repository": "",
+  "repository": "https://github.com/winding-lines/ember-cli-typify.git",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": {
+    "name": "Marius Seritan",
+    "email": "git@winding-lines.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.2",
@@ -42,7 +45,8 @@
     "ember-addon"
   ],
   "dependencies": {
-    "broccoli-typify": "0.0.5",
+    "@types/ember": "winding-lines/at-types-ember",
+    "broccoli-typify": "0.0.8",
     "ember-cli-babel": "^5.1.6"
   },
   "ember-addon": {

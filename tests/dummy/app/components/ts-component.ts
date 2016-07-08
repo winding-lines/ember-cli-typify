@@ -1,7 +1,9 @@
-/// <reference path="@types/ember" />
-
 import Ember from 'ember';
 
+function compute() : {value:string} {
+  return {value: 'from component'};
+}
+
 export default Ember.Component.extend({
-  someValue: 'from component'
+  someValue: compute().value
 });
