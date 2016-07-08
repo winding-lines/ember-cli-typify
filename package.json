@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-typify",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Allow ember apps to use typescript files.",
   "directories": {
     "doc": "doc",

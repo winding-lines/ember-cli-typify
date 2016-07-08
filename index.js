@@ -2,6 +2,7 @@
 
 'use strict';
 var path      = require('path');
+var process = require('process');
 var Typify = require('./lib/typify');
 
 module.exports = {
@@ -19,7 +20,7 @@ module.exports = {
   },
 
   setupPreprocessorRegistry: function(type, registry) {
-    var load = Typify.loadTsConfig(__dirname);
+    var load = Typify.loadTsConfig(process.cwd());
     var plugin = new Typify({tsOptions:load});
     registry.add('js', plugin);
   }
