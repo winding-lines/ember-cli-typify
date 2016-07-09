@@ -7,7 +7,7 @@ var Typify = require('./lib/typify');
 
 module.exports = {
   name: 'ember-cli-typify',
-  
+
 
   included: function(app) {
     this._super.included.apply(this, arguments);
@@ -20,11 +20,14 @@ module.exports = {
   },
 
   setupPreprocessorRegistry: function(type, registry) {
-    console.log('first registry setup ' + type);
-    this._typifyRegistrySetup = 7;
-    var load = Typify.loadTsConfig(process.cwd());
-    var plugin = new Typify({tsOptions:load});
-    registry.add('js', plugin);
+    try {
+      var load = Typify.loadTsConfig(process.cwd());
+      var plugin = new Typify({tsOptions:load});
+      registry.add('js', plugin);
+    } catch ( ex ) {
+      console.log( "Missing or invalid tsconfig.json, please fix or run `ember generate ember-cli-typify`." );
+      console.log( '  ' + ex.toString());
+    }
   }
 
 };
