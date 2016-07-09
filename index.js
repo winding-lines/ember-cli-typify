@@ -7,12 +7,12 @@ var Typify = require('./lib/typify');
 
 module.exports = {
   name: 'ember-cli-typify',
+  
 
   included: function(app) {
     this._super.included.apply(this, arguments);
     this.app = app;
 
-    this.setupPreprocessorRegistry('parent', app.registry);
   },
 
   blueprintsPath: function() {
@@ -20,6 +20,8 @@ module.exports = {
   },
 
   setupPreprocessorRegistry: function(type, registry) {
+    console.log('first registry setup ' + type);
+    this._typifyRegistrySetup = 7;
     var load = Typify.loadTsConfig(process.cwd());
     var plugin = new Typify({tsOptions:load});
     registry.add('js', plugin);
