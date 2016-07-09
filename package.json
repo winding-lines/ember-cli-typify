@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-typify",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "Allow ember apps to use typescript files.",
     "directories": {
       "doc": "doc",
@@ -45,8 +45,8 @@
       "ember-addon"
       ],
     "dependencies": {
-      "@types/ember": "winding-lines/at-types-ember#31921824",
-      "broccoli-typify": "0.0.10",
+      "at-types-ember": "2.0.0-dev2",
+      "broccoli-typify": "0.0.11",
       "ember-cli-babel": "^5.1.6"
     },
     "ember-addon": {
