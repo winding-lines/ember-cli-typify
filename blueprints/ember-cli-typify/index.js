@@ -4,13 +4,19 @@ module.exports = {
   description: 'Initialize files needed for typescript compilation',
 
   files: function() {
-    return [path.join(this.path, 'files', 'tsconfig.json')];
+    return [
+      path.join(this.path, 'files', 'tsconfig.json'),
+      path.join(this.path, 'files', 'local-types', 'ember-config-environment.d.ts')
+      ];
   },
 
    mapFile: function() {
     var result = this._super.mapFile.apply(this, arguments);
-    if (result.indexOf('/tsconfig.json')) {
+    if (result.indexOf('/tsconfig.json')>-1) {
       return 'tsconfig.json';
+    } else if (result.indexOf('/local-types/')>-1) {
+      var pos = result.indexOf('/local-types/');
+      return result.substring(pos+1);
     }
   },
 
