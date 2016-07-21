@@ -4,6 +4,7 @@
     "allowJs": true,
     "moduleResolution": "node",
     "noEmitOnError": true,
+    "noEmit": true,
     "baseUrl": ".",
     "paths": {
       "ember": ["node_modules/at-types-ember"],
