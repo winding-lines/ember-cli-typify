@@ -6,7 +6,7 @@ module.exports = {
   files: function() {
     return [
       path.join(this.path, 'files', 'tsconfig.json'),
-      path.join(this.path, 'files', 'local-types', 'ember-config-environment.d.ts')
+      path.join(this.path, 'files', 'app', 'config', 'environment.d.ts')
       ];
   },
 
@@ -14,8 +14,8 @@ module.exports = {
     var result = this._super.mapFile.apply(this, arguments);
     if (result.indexOf('/tsconfig.json')>-1) {
       return 'tsconfig.json';
-    } else if (result.indexOf('/local-types/')>-1) {
-      var pos = result.indexOf('/local-types/');
+    } else if (result.indexOf('/app/')>-1) {
+      var pos = result.indexOf('/app/');
       return result.substring(pos+1);
     }
   },
