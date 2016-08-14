@@ -17,3 +17,14 @@ Create a tsconfig.json file:
 ## Incremental adoption
 
 Rename the files you want to check from .js to .ts
+
+## VSCode setup
+
+Create the file `.vscode/settings.json` with the following content:
+
+```json
+// Place your settings in this file to overwrite default and user settings.
+{
+    "typescript.tsdk" : "node_modules/typescript/lib"
+}
+```
