@@ -7,6 +7,7 @@ Enable typescript preprocessing on Ember 2.x apps.
 
 To use install dependencies
 
+    npm install --save-dev typescript@2.0 # Older versions are not supported
     npm install --save-dev ember-cli-typify
     npm install --save-dev github:winding-lines/at-types-ember
 
