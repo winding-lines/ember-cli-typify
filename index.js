@@ -12,7 +12,7 @@ module.exports = {
   included: function(app) {
     this._super.included.apply(this, arguments);
     this.app = app;
-
+    this.setupPreprocessorRegistry('parent', app.registry);
   },
 
   blueprintsPath: function() {
