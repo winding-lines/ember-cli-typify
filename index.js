@@ -3,7 +3,7 @@
 'use strict';
 var path      = require('path');
 var process = require('process');
-var Typify = require('./lib/typify');
+var TsPreprocessor = require('./lib/typescript-preprocessor');
 
 module.exports = {
   name: 'ember-cli-typify',
@@ -21,7 +21,7 @@ module.exports = {
 
   setupPreprocessorRegistry: function(type, registry) {
     try {
-      var plugin = new Typify({includeExtensions: ['.ts','.js']});
+      var plugin = new TsPreprocessor({includeExtensions: ['.ts','.js']});
       registry.add('js', plugin);
     } catch ( ex ) {
       console.log( "Missing or invalid tsconfig.json, please fix or run `ember generate ember-cli-typify`." );
