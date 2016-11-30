@@ -9,7 +9,7 @@ To use install dependencies
 
     npm install --save-dev typescript@2.0 # Older versions are not supported
     npm install --save-dev ember-cli-typify
-    npm install --save-dev github:winding-lines/at-types-ember
+    npm install --save-dev @types/ember
 
 Create a tsconfig.json file:
 
