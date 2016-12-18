@@ -1,3 +1,7 @@
+# DEPRECATED
+
+Please use ember-cli-typescript instead.
+
 # Ember-cli-typify
 
 Enable typescript preprocessing on Ember 2.x apps.
